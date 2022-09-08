@@ -1,0 +1,45 @@
+load_size : 256                 # 'load size of the input images. If None maintains'
+                                # 'original image size, if int resizes each image'
+                                # 'such that the smaller side is this number.'
+
+stride : 4                      # stride of first convolution layer. 
+                                # small stride -> higher resolution
+
+model_type : 'dino_vits8'       # type of model to extract. 
+                                # Choose from 
+                                # [dino_vits8 | dino_vits16 | dino_vitb8 | dino_vitb16 | 
+                                # vit_small_patch8_224 | vit_small_patch16_224 | 
+                                # vit_base_patch8_224 | vit_base_patch16_224]
+
+facet : 'key'                   # facet to create descriptors from ['key' | 'query' | 'value' | 'token']
+
+layer : 11                      # layer to create descriptors from.
+
+bin : 'True'                   # create a binned descriptor if True.
+
+thresh : 0.065                  # 'saliency maps threshold to distinguish fg / bg.'
+
+elbow : 0.975                   # 'Elbow coefficient for setting number of clusters.'
+
+votes_percentage : 75           # percentage of votes needed for a cluster to be considered salient.
+
+sample_interval : 100           # sample every ith descriptor for training clustering.
+
+outliers_thresh : 0.7           # Threshold for removing outliers.
+
+low_res_saliency_maps : 'True'  # using low resolution saliency maps. Reduces RAM needs.
+
+num_parts : 3                   # Number of common object parts.
+
+num_pairs : 7                  # Number of correspondences.
+
+num_crop_augmentations : 3      # If > 1, applies this number of random 
+                                # crop augmentations taking 95% of the 
+                                # original images and flip augmentations.
+                                
+
+three_stages : False            # If true, use three clustering stages 
+                                # instead of two. Useful for small sets 
+                                # with a lot of distraction objects.
+
+elbow_second_stage : 0.94       # Elbow coefficient for setting number of clusters."

@@ -1,0 +1,15 @@
+/.ipynb_checkpoints
+/augs
+/exp_out_data
+/exp_out_figs
+/output
+/output_c
+*.png
+*.pyc
+*.npy
+*.pth
+*.model
+*.cpython-*
+*__pycache__*
+!*/usb/*.png
+!*/usb/*.npy
